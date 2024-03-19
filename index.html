@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>E-mail List</title>
+<link href='./assets/css/style.css' rel='stylesheet'>
+</head>
+<body>
+<div id='app'>
+    <div class="container p_5">
+        <h1 class="p_5">Email List Generator</h1>
+        <div class="email_list p_5" v-for="email in emails">
+            {{email}}
+        </div>
+        <div class="generate p_5">
+          
+        </div>
+    </div>
+
+
+</div>
+<!-- cdn -->
+<script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src='./assets/js/app.js'></script>
+</body>
+</html>

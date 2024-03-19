@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cadetblue;
+    width: 100vw;
+    height: 100vh;
+    color: darkblue;
+}
+
+.p_5 {
+    padding: 0.5rem;
+}
+
+.container {
+    width: 90%;
+    height: 90%;
+    margin: 3rem auto;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: rgb(148, 208, 210);
+
+    .email_list {
+        width: 100%;
+        background-color: rgb(171, 207, 209);
+    }
+
+    .generate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+
