@@ -1,28 +1,42 @@
 <!doctype html>
 <html lang='en'>
+
 <head>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>E-mail List</title>
-<link href='./assets/css/style.css' rel='stylesheet'>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>E-mail List</title>
+    <link href='./assets/css/style.css' rel='stylesheet'>
 </head>
+
 <body>
-<div id='app'>
-    <div class="container p_5">
-        <h1 class="p_5">Email List Generator</h1>
-        <div class="email_list p_5" v-for="email in emails">
-            {{email}}
+    <div id='app'>
+        <div class="container p_5">
+            <h1 class="p_5">Email List Generator</h1>
+
+            <!-- mi assicuro che la lunghezza della lista sia di 10 per stampare la lista -->
+            <div class="email_list p_5" v-if="emails.length == 10">
+
+                <!-- creo le 10 email dinamicamente -->
+                <div class="email p_5" v-for="email in emails">
+                    {{email}}
+                </div>
+            </div>
+            <!-- /emails -->
+
+            <div class="generate p_5">
+                <!-- Aggiungo un button per avviare la richiesta -->
+                <button class="generate_btn" @click="emailGenerator()"> Generate</button>
+            </div>
         </div>
-        <div class="generate p_5">
-            <button class="generate_btn" @click="emailGenerator()"> Generate</button>
-        </div>
+
+
     </div>
-
-
-</div>
-<!-- cdn -->
-<script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src='./assets/js/app.js'></script>
+    <!-- cdn -->
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+        integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='./assets/js/app.js'></script>
 </body>
+
 </html>
